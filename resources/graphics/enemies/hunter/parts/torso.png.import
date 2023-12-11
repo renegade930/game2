@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://y2juxae3gb4g"
-path="res://.godot/imported/torso.png-b3d14453c918bcfccfeb17e86afed6c6.ctex"
+path="res://.godot/imported/torso.png-b451aa4c91b1455e4868f3bcd5a05d7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/level/resources/graphics/enemies/hunter/parts/torso.png"
-dest_files=["res://.godot/imported/torso.png-b3d14453c918bcfccfeb17e86afed6c6.ctex"]
+source_file="res://resources/graphics/enemies/hunter/parts/torso.png"
+dest_files=["res://.godot/imported/torso.png-b451aa4c91b1455e4868f3bcd5a05d7b.ctex"]
 
 [params]
 

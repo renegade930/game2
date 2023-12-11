@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv17oogf2o2nv"
-path="res://.godot/imported/00046.png-249065501e4466311fa179eb85eda983.ctex"
+path="res://.godot/imported/00046.png-d5bacc48e9b244896457b741c6eeb5ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/level/resources/graphics/lights/fan_animation/00046.png"
-dest_files=["res://.godot/imported/00046.png-249065501e4466311fa179eb85eda983.ctex"]
+source_file="res://resources/graphics/lights/fan_animation/00046.png"
+dest_files=["res://.godot/imported/00046.png-d5bacc48e9b244896457b741c6eeb5ae.ctex"]
 
 [params]
 

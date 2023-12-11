@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cytswc36cspeo"
-path="res://.godot/imported/organic_impact.mp3-1052812e0cf8e6f704d2066da8c9eaf1.mp3str"
+path="res://.godot/imported/organic_impact.mp3-6535d715db1b5ec8da27e378027e5a88.mp3str"
 
 [deps]
 
-source_file="res://scenes/level/resources/audio/organic_impact.mp3"
-dest_files=["res://.godot/imported/organic_impact.mp3-1052812e0cf8e6f704d2066da8c9eaf1.mp3str"]
+source_file="res://resources/audio/organic_impact.mp3"
+dest_files=["res://.godot/imported/organic_impact.mp3-6535d715db1b5ec8da27e378027e5a88.mp3str"]
 
 [params]
 

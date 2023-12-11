@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://t84rwasrh5vf"
-path="res://.godot/imported/line.png-590837746dfcf9f218ab8d58317260fe.ctex"
+path="res://.godot/imported/line.png-951a2372a9537c26c12fd784c47910ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/level/resources/graphics/objects/infestation/line.png"
-dest_files=["res://.godot/imported/line.png-590837746dfcf9f218ab8d58317260fe.ctex"]
+source_file="res://resources/graphics/objects/infestation/line.png"
+dest_files=["res://.godot/imported/line.png-951a2372a9537c26c12fd784c47910ef.ctex"]
 
 [params]
 

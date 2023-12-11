@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://daqo6wwxs7bda"
-path="res://.godot/imported/bed.png-2e3a4fc35f5c1fdf93fcd743f017bae6.ctex"
+path="res://.godot/imported/bed.png-658203e0b7dd6d7d2fd1b2a07eb89f18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/level/resources/graphics/objects/bed.png"
-dest_files=["res://.godot/imported/bed.png-2e3a4fc35f5c1fdf93fcd743f017bae6.ctex"]
+source_file="res://resources/graphics/objects/bed.png"
+dest_files=["res://.godot/imported/bed.png-658203e0b7dd6d7d2fd1b2a07eb89f18.ctex"]
 
 [params]
 

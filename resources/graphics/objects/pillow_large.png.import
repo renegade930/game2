@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://57ipvbadna8e"
-path="res://.godot/imported/pillow_large.png-fa6e41b9a17f480c0a018edc98f870f2.ctex"
+path="res://.godot/imported/pillow_large.png-415157c0be4b0ba3f6a5d071cf8d7baa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/level/resources/graphics/objects/pillow_large.png"
-dest_files=["res://.godot/imported/pillow_large.png-fa6e41b9a17f480c0a018edc98f870f2.ctex"]
+source_file="res://resources/graphics/objects/pillow_large.png"
+dest_files=["res://.godot/imported/pillow_large.png-415157c0be4b0ba3f6a5d071cf8d7baa.ctex"]
 
 [params]
 

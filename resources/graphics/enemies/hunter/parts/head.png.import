@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bokenmuclqwxq"
-path="res://.godot/imported/head.png-75a29ee2428e0b4b672c4913584fd309.ctex"
+path="res://.godot/imported/head.png-ff1cfa64677ed5bff136c9f6df37fcf4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/level/resources/graphics/enemies/hunter/parts/head.png"
-dest_files=["res://.godot/imported/head.png-75a29ee2428e0b4b672c4913584fd309.ctex"]
+source_file="res://resources/graphics/enemies/hunter/parts/head.png"
+dest_files=["res://.godot/imported/head.png-ff1cfa64677ed5bff136c9f6df37fcf4.ctex"]
 
 [params]
 

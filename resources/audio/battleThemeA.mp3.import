@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bmblcjwrimmkc"
-path="res://.godot/imported/battleThemeA.mp3-c6d3b06cbe17d0eeb620d07455ed69dd.mp3str"
+path="res://.godot/imported/battleThemeA.mp3-88b84f915000547e5d635999e59c83d1.mp3str"
 
 [deps]
 
-source_file="res://scenes/level/resources/audio/battleThemeA.mp3"
-dest_files=["res://.godot/imported/battleThemeA.mp3-c6d3b06cbe17d0eeb620d07455ed69dd.mp3str"]
+source_file="res://resources/audio/battleThemeA.mp3"
+dest_files=["res://.godot/imported/battleThemeA.mp3-88b84f915000547e5d635999e59c83d1.mp3str"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dg3t8gw111ic"
-path="res://.godot/imported/subatomic.tsoonami.ttf-24772c814c55aa9676f3a36a6fd701ac.fontdata"
+path="res://.godot/imported/subatomic.tsoonami.ttf-3cbab540153350b499718050c19aa9f2.fontdata"
 
 [deps]
 
-source_file="res://scenes/level/resources/graphics/ui/subatomic.tsoonami.ttf"
-dest_files=["res://.godot/imported/subatomic.tsoonami.ttf-24772c814c55aa9676f3a36a6fd701ac.fontdata"]
+source_file="res://resources/graphics/ui/subatomic.tsoonami.ttf"
+dest_files=["res://.godot/imported/subatomic.tsoonami.ttf-3cbab540153350b499718050c19aa9f2.fontdata"]
 
 [params]
 

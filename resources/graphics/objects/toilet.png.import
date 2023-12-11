@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2qn7b8uiojqw"
-path="res://.godot/imported/toilet.png-0aad986005a82cf984e068de1e958846.ctex"
+path="res://.godot/imported/toilet.png-08113b01a1eebfcae8ac0aa76c16a0f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/level/resources/graphics/objects/toilet.png"
-dest_files=["res://.godot/imported/toilet.png-0aad986005a82cf984e068de1e958846.ctex"]
+source_file="res://resources/graphics/objects/toilet.png"
+dest_files=["res://.godot/imported/toilet.png-08113b01a1eebfcae8ac0aa76c16a0f4.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cu58d7d64cffg"
-path="res://.godot/imported/ventilation_hole.png-ddaf96ceac9ff5bfea679c5e89a32b45.ctex"
+path="res://.godot/imported/ventilation_hole.png-77300fa131a756c517a35a4b27e1c676.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/level/resources/graphics/objects/ventilation_hole.png"
-dest_files=["res://.godot/imported/ventilation_hole.png-ddaf96ceac9ff5bfea679c5e89a32b45.ctex"]
+source_file="res://resources/graphics/objects/ventilation_hole.png"
+dest_files=["res://.godot/imported/ventilation_hole.png-77300fa131a756c517a35a4b27e1c676.ctex"]
 
 [params]
 

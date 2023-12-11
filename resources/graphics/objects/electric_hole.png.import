@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bi5gbf68at5du"
-path="res://.godot/imported/electric_hole.png-5df90aea537127170c14dc744db05306.ctex"
+path="res://.godot/imported/electric_hole.png-e4a481bcdd232a5d0d9bc52728fb7dd2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/level/resources/graphics/objects/electric_hole.png"
-dest_files=["res://.godot/imported/electric_hole.png-5df90aea537127170c14dc744db05306.ctex"]
+source_file="res://resources/graphics/objects/electric_hole.png"
+dest_files=["res://.godot/imported/electric_hole.png-e4a481bcdd232a5d0d9bc52728fb7dd2.ctex"]
 
 [params]
 

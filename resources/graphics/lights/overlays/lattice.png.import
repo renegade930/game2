@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckd73t18cn855"
-path="res://.godot/imported/lattice.png-17898172d8e0cf7b41fb005f0a059f65.ctex"
+path="res://.godot/imported/lattice.png-2ac425cd90b2551619b39266f4b0c383.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/level/resources/graphics/lights/overlays/lattice.png"
-dest_files=["res://.godot/imported/lattice.png-17898172d8e0cf7b41fb005f0a059f65.ctex"]
+source_file="res://resources/graphics/lights/overlays/lattice.png"
+dest_files=["res://.godot/imported/lattice.png-2ac425cd90b2551619b39266f4b0c383.ctex"]
 
 [params]
 

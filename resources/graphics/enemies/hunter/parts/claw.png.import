@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chdhs24wgs7n7"
-path="res://.godot/imported/claw.png-83ccacf23a0c50bde9ef2885316761c2.ctex"
+path="res://.godot/imported/claw.png-8fb220f4165e05bac20562f21a4750ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/level/resources/graphics/enemies/hunter/parts/claw.png"
-dest_files=["res://.godot/imported/claw.png-83ccacf23a0c50bde9ef2885316761c2.ctex"]
+source_file="res://resources/graphics/enemies/hunter/parts/claw.png"
+dest_files=["res://.godot/imported/claw.png-8fb220f4165e05bac20562f21a4750ce.ctex"]
 
 [params]
 

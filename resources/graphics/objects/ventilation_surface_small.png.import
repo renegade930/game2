@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://112di6a2ielt"
-path="res://.godot/imported/ventilation_surface_small.png-dc1abe00a4a51ae34364862bca7b8964.ctex"
+path="res://.godot/imported/ventilation_surface_small.png-285367224047acbadd7c276bb8078216.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/level/resources/graphics/objects/ventilation_surface_small.png"
-dest_files=["res://.godot/imported/ventilation_surface_small.png-dc1abe00a4a51ae34364862bca7b8964.ctex"]
+source_file="res://resources/graphics/objects/ventilation_surface_small.png"
+dest_files=["res://.godot/imported/ventilation_surface_small.png-285367224047acbadd7c276bb8078216.ctex"]
 
 [params]
 

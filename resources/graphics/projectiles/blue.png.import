@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blcxr4827pml8"
-path="res://.godot/imported/blue.png-cce1e94cbef8966ae358e2fffdba454d.ctex"
+path="res://.godot/imported/blue.png-42c77ce10be3174f1d081ab63c8e4f69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/level/resources/graphics/projectiles/blue.png"
-dest_files=["res://.godot/imported/blue.png-cce1e94cbef8966ae358e2fffdba454d.ctex"]
+source_file="res://resources/graphics/projectiles/blue.png"
+dest_files=["res://.godot/imported/blue.png-42c77ce10be3174f1d081ab63c8e4f69.ctex"]
 
 [params]
 

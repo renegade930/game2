@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bb6d35nuh20me"
-path="res://.godot/imported/00006.png-6b11e7593aabb77c3f89c61a117a01a8.ctex"
+path="res://.godot/imported/00006.png-79b3defcadde09dd627c3781ad43fef0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/level/resources/graphics/enemies/bug/walk/00006.png"
-dest_files=["res://.godot/imported/00006.png-6b11e7593aabb77c3f89c61a117a01a8.ctex"]
+source_file="res://resources/graphics/enemies/bug/walk/00006.png"
+dest_files=["res://.godot/imported/00006.png-79b3defcadde09dd627c3781ad43fef0.ctex"]
 
 [params]
 
