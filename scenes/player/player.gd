@@ -1,13 +1,19 @@
 extends Node2D
 
-var pos: Vector2 = Vector2.ZERO
-var speed = 200
-
 func _ready():
-	pass # Replace with function body.
+	print($"..".test_array)
+	$"..".test_function()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position = pos
-	pos.x += speed * delta
+	
+	#Input.get_vector(negative.x)
+	var direction = Input.get_vector("Left", "Right", "Forward", "Backward")
+	position += direction * 400 * delta
+	
+	if Input.is_action_just_pressed("Shoot"):
+		print("Shoot")
+	if Input.is_action_just_pressed("Grenade toss"):
+		print("Grenade toss")
+	
+func move_100_forward():
+	position.x += 100
