@@ -16,3 +16,14 @@ texture = ExtResource("1_5tjng")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.833333, 0.727143)
 shape = SubResource("CircleShape2D_pdfq5")
+
+[node name="LaserTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="GrenadeTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="LaserTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="GrenadeTimer" to="." method="_on_grenade_timer_timeout"]

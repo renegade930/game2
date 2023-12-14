@@ -2,11 +2,15 @@ extends Node2D
 
 
 
+func _on_gate_player_entered_gate(body):
+	print("player has entered")
+	print(body)
 
 
-#func _process(delta):
-	#$Player.rotation_degrees += 10 * delta
-	#if $Player.position.x > 1000:
-		#$Player.pos.x = 1
+
+func _on_player_grenade():
+	print("nade from level")
 
 
+func _on_player_laser():
+	print("laser from level")
