@@ -25,9 +25,11 @@ func _process(_delta):
 		laser.emit(selected_laser.global_position)
 		
 	if Input.is_action_just_pressed("Grenade toss") and can_grenade:
+		var grenade_markers = $GrenadeStartPos.get_children()
+		var selected_grenade = grenade_markers[randi() % grenade_markers.size()]
 		can_grenade = false
 		$GrenadeTimer.start()
-		grenade.emit()
+		grenade.emit(selected_grenade.global_position)
 
 
 func _on_timer_timeout():

@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_6lcin"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pdfq5"]
-radius = 79.2
+radius = 60.3143
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_6lcin")
@@ -14,7 +14,7 @@ position = Vector2(2, -39)
 texture = ExtResource("1_5tjng")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(0.833333, 0.727143)
+scale = Vector2(1.032, 1)
 shape = SubResource("CircleShape2D_pdfq5")
 
 [node name="LaserTimer" type="Timer" parent="."]
@@ -24,6 +24,17 @@ one_shot = true
 [node name="GrenadeTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[node name="GrenadeStartPos" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="GrenadeStartPos"]
+position = Vector2(36, -46)
+
+[node name="Marker2D2" type="Marker2D" parent="GrenadeStartPos"]
+position = Vector2(21, -42)
+
+[node name="Marker2D3" type="Marker2D" parent="GrenadeStartPos"]
+position = Vector2(49, -36)
 
 [node name="LaserStartPos" type="Node2D" parent="."]
 

@@ -1,5 +1,6 @@
 extends StaticBody2D
 
+ 
 signal player_entered_gate(body)
 
 
