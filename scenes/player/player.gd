@@ -13,6 +13,9 @@ func _process(_delta):
 	velocity = direction * 500
 	move_and_slide()
 	
+	#rotate
+	look_at(get_global_mouse_position())
+	
 	
 	if Input.is_action_just_pressed("Dash"):
 		position += direction * 70
@@ -22,14 +25,15 @@ func _process(_delta):
 		var selected_laser = laser_markers[randi() % laser_markers.size()]
 		can_laser = false
 		$LaserTimer.start()
-		laser.emit(selected_laser.global_position)
+		var look_direction = (get_global_mouse_position() - position).normalized()
+		laser.emit(selected_laser.global_position, look_direction)
 		
 	if Input.is_action_just_pressed("Grenade toss") and can_grenade:
-		var grenade_markers = $GrenadeStartPos.get_children()
-		var selected_grenade = grenade_markers[randi() % grenade_markers.size()]
 		can_grenade = false
 		$GrenadeTimer.start()
-		grenade.emit(selected_grenade.global_position)
+		var pos = $LaserStartPos.get_children()[0].global_position
+		var look_direction = (get_global_mouse_position() - position).normalized()
+		grenade.emit(pos, look_direction)
 
 
 func _on_timer_timeout():
