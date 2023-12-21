@@ -7,6 +7,7 @@
 radius = 60.3143
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 31
 script = ExtResource("1_6lcin")
 
 [node name="SpriteImage" type="Sprite2D" parent="."]
@@ -37,6 +38,9 @@ position = Vector2(5.00031, -129)
 
 [node name="Marker2D3" type="Marker2D" parent="LaserStartPos"]
 position = Vector2(18.0003, -129)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
 
 [connection signal="timeout" from="LaserTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="GrenadeTimer" to="." method="_on_grenade_timer_timeout"]

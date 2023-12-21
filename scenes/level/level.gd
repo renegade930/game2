@@ -3,8 +3,8 @@ extends Node2D
 var laser_scene: PackedScene = preload("res://scenes/projectiles/laser.tscn")
 var grenade_scene: PackedScene = preload("res://scenes/projectiles/grenade.tscn")
 
-func _on_gate_player_entered_gate(body):
-	get_tree().change_scene_to_file("res://scenes/level/level_2.tscn")
+func _on_gate_player_entered_gate():
+	#get_tree().change_scene_to_file("res://scenes/level/level_2.tscn")
 	print("player entered")
 
 
@@ -16,7 +16,8 @@ func _on_player_grenade(pos, direction):
 	$Projectiles.add_child(grenade)
 
 func _on_player_laser(pos, direction):
-	var laser = laser_scene.instantiate()
+	var laser = laser_scene.instantiate() as Area2D
 	laser.position = pos
-	laser.linear_velocity = direction * laser.speed
+	laser.rotation_degrees = rad_to_deg(direction.angle()) + 90
+	laser.direction = direction
 	$Projectiles.add_child(laser)
