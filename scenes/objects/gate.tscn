@@ -12,11 +12,11 @@ collision_layer = 16
 collision_mask = 9
 script = ExtResource("1_fkus1")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_yy1vi")
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-1439, -779, -1439, 564, -1396, 675, -1296, 750, -1189, 778, -366, 774, -366, 493, 500, 497, 496, 774, 1327, 774, 1434, 742, 1519, 660, 1551, 557, 1551, -783)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yy1vi")
 
 [node name="Area2D" type="Area2D" parent="."]
 
