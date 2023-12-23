@@ -7,9 +7,9 @@
 size = Vector2(841, 178)
 
 [node name="Gate" type="StaticBody2D"]
-scale = Vector2(0.0808261, 0.0808261)
+scale = Vector2(0.135071, 0.135071)
 collision_layer = 16
-collision_mask = 9
+collision_mask = 13
 script = ExtResource("1_fkus1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

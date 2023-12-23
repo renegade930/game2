@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5d3ff3edls6p"]
+[gd_scene load_steps=5 format=3 uid="uid://c5d3ff3edls6p"]
 
 [ext_resource type="Script" path="res://scenes/projectiles/laser.gd" id="1_4w081"]
 [ext_resource type="Texture2D" uid="uid://blcxr4827pml8" path="res://resources/graphics/projectiles/blue.png" id="1_fm7n7"]
@@ -7,9 +7,13 @@
 radius = 6.0
 height = 84.0
 
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qwdv8"]
+
 [node name="Laser" type="Area2D"]
+collision_layer = 8
+collision_mask = 30
 script = ExtResource("1_4w081")
-speed = 1480
+speed = 1100
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, 38)
@@ -17,3 +21,17 @@ texture = ExtResource("1_fm7n7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_v2v2h")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../CollisionShape2D")
+libraries = {
+"": SubResource("AnimationLibrary_qwdv8")
+}
+
+[node name="LaserDeathTimer" type="Timer" parent="."]
+wait_time = 1.683
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="LaserDeathTimer" to="." method="_on_laser_death_timer_timeout"]

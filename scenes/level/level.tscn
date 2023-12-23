@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://uqm12wh33bd3"]
+[gd_scene load_steps=21 format=3 uid="uid://uqm12wh33bd3"]
 
 [ext_resource type="Script" path="res://scenes/level/level.gd" id="1_irgi6"]
 [ext_resource type="PackedScene" uid="uid://cvf8kh2llu38h" path="res://scenes/player/player.tscn" id="1_y44jb"]
@@ -8,12 +8,15 @@
 [ext_resource type="Texture2D" uid="uid://bi4ei01alpu6d" path="res://resources/graphics/decals/moss/moss_5.png" id="4_2llis"]
 [ext_resource type="Texture2D" uid="uid://chxpp1k3skepk" path="res://resources/graphics/decals/blood.png" id="5_x0qya"]
 [ext_resource type="Texture2D" uid="uid://dhmv6qfbqclpk" path="res://resources/graphics/decals/moss/moss_4.png" id="6_5whwd"]
+[ext_resource type="PackedScene" uid="uid://c7jxd4d1r7d7l" path="res://scenes/objects/wall_lamp.tscn" id="7_lqxp7"]
 [ext_resource type="Texture2D" uid="uid://kynmaqbq7o02" path="res://resources/graphics/decals/moss/moss_1.png" id="7_r3h7w"]
 [ext_resource type="Texture2D" uid="uid://wk8kvvkgg8bv" path="res://resources/graphics/tilesets/outside_walls.png" id="9_u0o2x"]
 [ext_resource type="Texture2D" uid="uid://bi0wmps5pv586" path="res://resources/graphics/tilesets/soil.png" id="10_od4nr"]
 [ext_resource type="Texture2D" uid="uid://j0sjxue22m08" path="res://resources/graphics/decals/moss/moss_2.png" id="10_p6h2o"]
 [ext_resource type="PackedScene" uid="uid://cc3mn75c84yb1" path="res://scenes/objects/steam_vent.tscn" id="11_yr5yu"]
 [ext_resource type="PackedScene" uid="uid://ck2nj2i6vi8jw" path="res://scenes/houses/house.tscn" id="13_7166l"]
+[ext_resource type="PackedScene" uid="uid://camwd4pg4l1cq" path="res://scenes/objects/light_fan_animation.tscn" id="14_18rio"]
+[ext_resource type="PackedScene" uid="uid://d3a7h367a5u48" path="res://scenes/enemies/drone.tscn" id="17_uuro3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_egf8e"]
 resource_name = "walls"
@@ -134,6 +137,10 @@ position = Vector2(963, 504)
 rotation = -0.455974
 texture = ExtResource("5_x0qya")
 
+[node name="WallLamp" parent="Ground/Blood" instance=ExtResource("7_lqxp7")]
+position = Vector2(495.094, -114.711)
+rotation = 3.58892
+
 [node name="Moss5" type="Sprite2D" parent="Ground"]
 position = Vector2(727, -211)
 texture = ExtResource("4_2llis")
@@ -157,24 +164,45 @@ rotation = -2.13635
 scale = Vector2(0.844414, 0.844414)
 texture = ExtResource("7_r3h7w")
 
-[node name="SteamVent" parent="." instance=ExtResource("11_yr5yu")]
-position = Vector2(-91, 312)
-
-[node name="House" parent="." instance=ExtResource("13_7166l")]
+[node name="House" parent="Ground" instance=ExtResource("13_7166l")]
 position = Vector2(2272, 1201)
 rotation = 3.14159
-scale = Vector2(0.234426, 0.234426)
+scale = Vector2(0.234284, 0.234284)
+
+[node name="SteamVent" parent="Ground" instance=ExtResource("11_yr5yu")]
+position = Vector2(-91, 312)
+
+[node name="LightFanAnimation" parent="Ground" instance=ExtResource("14_18rio")]
+position = Vector2(2226, 735)
+scale = Vector2(0.315504, 0.315504)
+autoplay = "Fan"
+
+[node name="LightFanAnimation2" parent="Ground" instance=ExtResource("14_18rio")]
+position = Vector2(2215, 1194)
+scale = Vector2(0.315504, 0.315504)
+autoplay = "Fan"
+
+[node name="LightFanAnimation3" parent="Ground" instance=ExtResource("14_18rio")]
+position = Vector2(-90, 313)
+scale = Vector2(0.233907, 0.233907)
+autoplay = "Fan"
 
 [node name="Gate" parent="." instance=ExtResource("3_b71qs")]
 position = Vector2(204, 66)
-scale = Vector2(0.138559, 0.138559)
+scale = Vector2(0.180156, 0.180156)
 
 [node name="Projectiles" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("1_y44jb")]
 position = Vector2(534, 331)
 scale = Vector2(0.561044, 0.561044)
 
+[node name="drone" parent="." instance=ExtResource("17_uuro3")]
+position = Vector2(184, 487)
+
+[connection signal="player_has_entered" from="Ground/House" to="." method="_on_house_player_has_entered"]
+[connection signal="player_has_exited" from="Ground/House" to="." method="_on_house_player_has_exited"]
 [connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]
 [connection signal="grenade" from="Player" to="." method="_on_player_grenade"]
 [connection signal="laser" from="Player" to="." method="_on_player_laser"]

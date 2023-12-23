@@ -3,17 +3,19 @@ extends CharacterBody2D
 var can_laser = true
 var can_grenade = true
 
-signal laser(pos)
-signal grenade(pos)
+signal laser(pos, direction)
+signal grenade(pos, direction)
+
+@export var max_speed: int = 500
+var speed: int = max_speed
 
 func _process(_delta):
 	
 	#Input.get_vector(negative.x)
 	var direction = Input.get_vector("Left", "Right", "Forward", "Backward")
-	velocity = direction * 500
+	velocity = direction * speed
 	move_and_slide()
 	
-	#rotate
 	look_at(get_global_mouse_position())
 	
 	
@@ -26,6 +28,7 @@ func _process(_delta):
 		can_laser = false
 		$LaserTimer.start()
 		var look_direction = (get_global_mouse_position() - position).normalized()
+		$CPUParticles2D.emitting = true 
 		laser.emit(selected_laser.global_position, look_direction)
 		
 	if Input.is_action_just_pressed("Grenade toss") and can_grenade:

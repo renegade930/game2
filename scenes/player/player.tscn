@@ -1,10 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://cvf8kh2llu38h"]
+[gd_scene load_steps=7 format=3 uid="uid://cvf8kh2llu38h"]
 
 [ext_resource type="Texture2D" uid="uid://s688dusltkqt" path="res://resources/graphics/player/player.png" id="1_5tjng"]
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_6lcin"]
+[ext_resource type="Texture2D" uid="uid://dxnte4l7uof8l" path="res://resources/graphics/decals/white.png" id="3_60ldu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pdfq5"]
 radius = 60.3143
+
+[sub_resource type="Gradient" id="Gradient_ol8jj"]
+offsets = PackedFloat32Array(0, 0.986667)
+colors = PackedColorArray(0.574748, 0.78943, 1, 0.878431, 0.369602, 0.518105, 0.970963, 0.694118)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_d7dla"]
+polygon = PackedVector2Array(45, -32, 23, -60, -21, -59, -54, -39, -62, -17, -58, 17, -33, 51, -29, 57, -17, 63, 6, 58, 46, 36, 73, 29, 77, -11)
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 31
@@ -41,6 +49,31 @@ position = Vector2(18.0003, -129)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(141, 10)
+emitting = false
+lifetime = 1.5
+one_shot = true
+speed_scale = 4.87
+explosiveness = 0.58
+randomness = 0.7
+lifetime_randomness = 0.73
+texture = ExtResource("3_60ldu")
+emission_shape = 1
+emission_sphere_radius = 15.22
+spread = 12.46
+gravity = Vector2(0, 0)
+initial_velocity_min = 200.0
+initial_velocity_max = 200.0
+angular_velocity_min = 87.27
+angular_velocity_max = 300.0
+scale_amount_min = 0.1
+scale_amount_max = 0.4
+color_ramp = SubResource("Gradient_ol8jj")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_d7dla")
 
 [connection signal="timeout" from="LaserTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="GrenadeTimer" to="." method="_on_grenade_timer_timeout"]

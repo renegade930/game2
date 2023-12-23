@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ck2nj2i6vi8jw"]
+[gd_scene load_steps=6 format=3 uid="uid://ck2nj2i6vi8jw"]
 
+[ext_resource type="Script" path="res://scenes/houses/house.gd" id="1_6vt7t"]
 [ext_resource type="Texture2D" uid="uid://b232ne8bujwql" path="res://resources/graphics/tilesets/interior.png" id="1_16efy"]
+[ext_resource type="PackedScene" uid="uid://d0nsyi4w4fewm" path="res://scenes/objects/simple_light.tscn" id="2_ww30x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_78ex8"]
 texture = ExtResource("1_16efy")
@@ -178,6 +180,7 @@ sources/1 = SubResource("TileSetAtlasSource_78ex8")
 
 [node name="House" type="Area2D"]
 scale = Vector2(0.377815, 0.377815)
+script = ExtResource("1_6vt7t")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(2551, 1291, 2436, 1379, 1067, 1378, 971, 1480, 983, 2791, 855, 2946, -474, 2924, -598, 2805, -587, -480, -470, -606, 2445, -612, 2547, -462)
@@ -191,3 +194,28 @@ layer_1/name = "interior walls"
 layer_1/tile_data = PackedInt32Array(-65534, 65537, 6, 2, 65537, 6, 65538, 196609, 8, -131070, 327681, 6, 65540, 196609, 8, 4, 65537, 6, -65532, 65537, 6, -131068, 327681, 6, 65542, 393217, 7, 65537, 1, 6, 131071, 1, 6, 131070, 262145, 7)
 layer_2/name = "outer walls"
 layer_2/tile_data = PackedInt32Array(196606, 196609, 1, 131070, 196609, 1, 65534, 196609, 1, -2, 196609, 1, -65538, 196609, 0, -65537, 262145, 0, -131072, 262145, 0, -131071, 262145, 0, -131070, 262145, 0, -131069, 262145, 0, -131068, 262145, 0, -131067, 262145, 0, -131066, 327681, 0, -65530, 327681, 1, 6, 327681, 1, 65542, 327681, 1, 131078, 327681, 1, 196614, 327681, 2, 196613, 262145, 2, 196612, 262145, 2, 196611, 262145, 2, 196610, 196609, 0, 262146, 327681, 1, 327682, 327681, 1, 393218, 327681, 1, 458754, 327681, 2, 524286, 196609, 2, 262142, 196609, 1, 327678, 196609, 1, 393214, 196609, 1, 458750, 196609, 1)
+
+[node name="Simple light" parent="." instance=ExtResource("2_ww30x")]
+position = Vector2(367.905, -479.07)
+scale = Vector2(2.76136, 2.76136)
+collision_layer = 4
+collision_mask = 7
+
+[node name="Simple light2" parent="." instance=ExtResource("2_ww30x")]
+position = Vector2(2400.65, 209.097)
+rotation = 1.5708
+scale = Vector2(2.76136, 2.76136)
+collision_layer = 4
+collision_mask = 7
+
+[node name="Simple light3" parent="." instance=ExtResource("2_ww30x")]
+position = Vector2(-497.598, 1717.77)
+rotation = -1.5708
+scale = Vector2(2.76136, 2.76136)
+collision_layer = 4
+collision_mask = 7
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="player_has_entered" from="." to="." method="_on_player_has_entered"]
+[connection signal="player_has_exited" from="." to="." method="_on_player_has_exited"]
