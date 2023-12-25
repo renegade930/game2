@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://c765v3ga3n8ee"]
+
+[ext_resource type="PackedScene" uid="uid://uqm12wh33bd3" path="res://scenes/level/level.tscn" id="1_4ww8c"]
+[ext_resource type="Script" path="res://scenes/level/inside.gd" id="2_3tfah"]
+[ext_resource type="Texture2D" uid="uid://7o2ct2oauqbg" path="res://resources/graphics/objects/Box.png" id="3_urksw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hitq4"]
+
+[node name="inside" instance=ExtResource("1_4ww8c")]
+script = ExtResource("2_3tfah")
+
+[node name="Area2D" type="Area2D" parent="." index="2"]
+scale = Vector2(1.00887, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" index="0"]
+position = Vector2(551, 111)
+scale = Vector2(1.22024, -0.583812)
+texture = ExtResource("3_urksw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="1"]
+position = Vector2(546, 114)
+scale = Vector2(21.7856, 7.40038)
+shape = SubResource("RectangleShape2D_hitq4")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
