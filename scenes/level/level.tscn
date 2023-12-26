@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://uqm12wh33bd3"]
+[gd_scene load_steps=4 format=3 uid="uid://uqm12wh33bd3"]
 
 [ext_resource type="Script" path="res://scenes/level/level.gd" id="1_irgi6"]
 [ext_resource type="PackedScene" uid="uid://cvf8kh2llu38h" path="res://scenes/player/player.tscn" id="1_y44jb"]
+[ext_resource type="PackedScene" uid="uid://bikrsx4d3x81e" path="res://scenes/UI/ui.tscn" id="3_niohk"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_irgi6")
@@ -14,6 +15,8 @@ metadata/_edit_lock_ = true
 [node name="Player" parent="." instance=ExtResource("1_y44jb")]
 position = Vector2(534, 331)
 scale = Vector2(0.561044, 0.561044)
+
+[node name="UI" parent="." instance=ExtResource("3_niohk")]
 
 [connection signal="grenade" from="Player" to="." method="_on_player_grenade"]
 [connection signal="laser" from="Player" to="." method="_on_player_laser"]
