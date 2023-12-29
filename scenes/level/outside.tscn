@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c6jvxhdd10bvu"]
+[gd_scene load_steps=22 format=3 uid="uid://c6jvxhdd10bvu"]
 
 [ext_resource type="PackedScene" uid="uid://uqm12wh33bd3" path="res://scenes/level/level.tscn" id="1_tqbey"]
 [ext_resource type="Script" path="res://scenes/level/outside.gd" id="2_4hxtp"]
@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://cc3mn75c84yb1" path="res://scenes/objects/steam_vent.tscn" id="13_dskwg"]
 [ext_resource type="PackedScene" uid="uid://camwd4pg4l1cq" path="res://scenes/objects/light_fan_animation.tscn" id="14_l8rh7"]
 [ext_resource type="PackedScene" uid="uid://dhg26vnu5yljo" path="res://scenes/objects/gate.tscn" id="15_okeld"]
+[ext_resource type="PackedScene" uid="uid://cuphg1tcaodj1" path="res://scenes/items/item.tscn" id="17_yv6c7"]
+[ext_resource type="PackedScene" uid="uid://d3a7h367a5u48" path="res://scenes/enemies/drone.tscn" id="18_8mrlx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_egf8e"]
 resource_name = "walls"
@@ -185,6 +187,16 @@ scale = Vector2(0.233907, 0.233907)
 autoplay = "Fan"
 
 [node name="Gate" parent="." index="1" instance=ExtResource("15_okeld")]
-position = Vector2(189, 84)
+position = Vector2(215, 19)
+
+[node name="Item" parent="." index="3" instance=ExtResource("17_yv6c7")]
+position = Vector2(483, 381)
+scale = Vector2(0.272675, 0.272675)
+
+[node name="drone" parent="Enemies" index="0" instance=ExtResource("18_8mrlx")]
+position = Vector2(166, 388)
+
+[node name="Player" parent="." index="5"]
+position = Vector2(248, 248)
 
 [connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]
