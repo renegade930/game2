@@ -32,7 +32,7 @@ func _on_house_player_has_exited():
 	tween.tween_property($Player/Camera2D,"zoom", Vector2(1,1),0.5) 
 
 
-func _on_player_update_stats():
-	$UI.update_laser_text()
-	$UI.update_grenade_text()
-	$UI.update_health()
+#func _on_player_update_stats():
+	#$UI.update_laser_text()
+	#$UI.update_grenade_text()
+	#$UI.update_health()
