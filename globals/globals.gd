@@ -14,5 +14,5 @@ var grenade_amount = 5:
 		
 var health = 25:
 	set(value):
-		stat_change.emit()
 		health = value
+		stat_change.emit()
