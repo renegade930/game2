@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://cmv78x53u3ug8" path="res://resources/graphics/lights/textures/circle.png" id="2_2to4x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ic03f"]
-radius = 55.7315
+radius = 11.8814
 
 [node name="Item" type="Area2D"]
-scale = Vector2(0.486013, 0.486013)
+scale = Vector2(0.16833, 0.16833)
 collision_layer = 16
 script = ExtResource("1_syhul")
 
@@ -16,9 +16,11 @@ script = ExtResource("1_syhul")
 shape = SubResource("CircleShape2D_ic03f")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.169735, 0.169735)
 texture = ExtResource("1_08a4k")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(0.193073, 0.193073)
 color = Color(1, 1, 1, 0.772549)
 energy = 1.29
 texture = ExtResource("2_2to4x")

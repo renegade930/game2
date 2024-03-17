@@ -161,6 +161,7 @@ scale = Vector2(0.546157, 0.546157)
 shape = SubResource("CircleShape2D_j5130")
 
 [node name="RedLight" type="PointLight2D" parent="."]
+visible = false
 rotation = 3.14159
 scale = Vector2(0.44808, 0.44808)
 color = Color(0.807843, 0.0941176, 0, 1)
@@ -169,10 +170,10 @@ texture = ExtResource("3_ondp7")
 texture_scale = 6.85
 
 [node name="Explosion" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.545454)
 texture = ExtResource("3_scxmb")
 hframes = 8
 vframes = 8
-metadata/_edit_lock_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

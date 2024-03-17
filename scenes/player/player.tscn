@@ -28,11 +28,11 @@ scale = Vector2(1, 0.969)
 shape = SubResource("CircleShape2D_pdfq5")
 
 [node name="LaserTimer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.097
 one_shot = true
 
 [node name="GrenadeTimer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 0.442
 one_shot = true
 
 [node name="LaserStartPos" type="Node2D" parent="."]

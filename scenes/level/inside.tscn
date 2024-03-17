@@ -1,16 +1,49 @@
-[gd_scene load_steps=6 format=3 uid="uid://c765v3ga3n8ee"]
+[gd_scene load_steps=7 format=3 uid="uid://c765v3ga3n8ee"]
 
 [ext_resource type="PackedScene" uid="uid://uqm12wh33bd3" path="res://scenes/level/level.tscn" id="1_4ww8c"]
 [ext_resource type="Script" path="res://scenes/level/inside.gd" id="2_3tfah"]
 [ext_resource type="Texture2D" uid="uid://7o2ct2oauqbg" path="res://resources/graphics/objects/Box.png" id="3_urksw"]
-[ext_resource type="PackedScene" uid="uid://cuphg1tcaodj1" path="res://scenes/items/item.tscn" id="4_0is22"]
+[ext_resource type="PackedScene" uid="uid://8gmlpid62h0a" path="res://scenes/items/toilet.tscn" id="4_s8rfm"]
+[ext_resource type="PackedScene" uid="uid://d21o8m15p06lr" path="res://scenes/items/crate.tscn" id="5_k0jl5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hitq4"]
 
 [node name="inside" instance=ExtResource("1_4ww8c")]
 script = ExtResource("2_3tfah")
 
-[node name="Area2D" type="Area2D" parent="." index="2"]
+[node name="Toilet" parent="." index="1" instance=ExtResource("4_s8rfm")]
+position = Vector2(237, 364)
+scale = Vector2(1.34447, 1.34447)
+
+[node name="Crate" parent="." index="2" instance=ExtResource("5_k0jl5")]
+position = Vector2(678, 392)
+
+[node name="Toilet2" parent="." index="3" instance=ExtResource("4_s8rfm")]
+position = Vector2(415, 256)
+scale = Vector2(1.34447, 1.34447)
+
+[node name="Crate2" parent="." index="4" instance=ExtResource("5_k0jl5")]
+position = Vector2(856, 284)
+
+[node name="Toilet3" parent="." index="5" instance=ExtResource("4_s8rfm")]
+position = Vector2(-469, 196)
+rotation = -1.57079
+scale = Vector2(1.34447, 1.34447)
+
+[node name="Crate3" parent="." index="6" instance=ExtResource("5_k0jl5")]
+position = Vector2(-28, 224)
+rotation = -1.57079
+
+[node name="Toilet4" parent="." index="7" instance=ExtResource("4_s8rfm")]
+position = Vector2(-583, 715)
+rotation = 1.57079
+scale = Vector2(1.34447, 1.34447)
+
+[node name="Crate4" parent="." index="8" instance=ExtResource("5_k0jl5")]
+position = Vector2(-142, 743)
+rotation = 1.57079
+
+[node name="Area2D" type="Area2D" parent="." index="10"]
 position = Vector2(564, 691)
 scale = Vector2(1.00887, 1)
 
@@ -24,23 +57,7 @@ position = Vector2(11.3686, -2.68823)
 scale = Vector2(21.7856, 7.40038)
 shape = SubResource("RectangleShape2D_hitq4")
 
-[node name="Item" parent="." index="3" instance=ExtResource("4_0is22")]
-position = Vector2(805, 426)
-scale = Vector2(0.272675, 0.272675)
-
-[node name="Item2" parent="." index="4" instance=ExtResource("4_0is22")]
-position = Vector2(662, 436)
-scale = Vector2(0.272675, 0.272675)
-
-[node name="Item3" parent="." index="5" instance=ExtResource("4_0is22")]
-position = Vector2(872, 366)
-scale = Vector2(0.272675, 0.272675)
-
-[node name="Item4" parent="." index="6" instance=ExtResource("4_0is22")]
-position = Vector2(741, 340)
-scale = Vector2(0.272675, 0.272675)
-
-[node name="Player" parent="." index="8"]
+[node name="Player" parent="." index="13"]
 position = Vector2(570, 540)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
